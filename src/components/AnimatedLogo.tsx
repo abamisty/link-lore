@@ -28,13 +28,13 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
   }, [animationPhase]);
 
   return (
-    <div className={cn("relative flex items-center space-x-3", className)}>
+    <div className={cn("relative flex items-center space-x-2 sm:space-x-3", className)}>
       {/* Animated Compass Logo */}
-      <div className="relative h-36 w-36">
+      <div className="relative h-16 w-16 sm:h-24 sm:w-24 md:h-32 md:w-32 lg:h-36 lg:w-36">
         {/* Large Compass Phase */}
         <div className="absolute inset-0">
           <img
-            src="/main gif.gif"
+            src="/logo logo gif.gif"
             alt="I²E Logo"
             className="w-full h-full object-contain"
           />
@@ -44,10 +44,10 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
       {/* Text that fades in */}
       <div className={cn(
         "transition-all duration-1000 delay-1000",
-        animationPhase === "final" ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
+        animationPhase === "final" ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2 sm:translate-x-4"
       )}>
-        <h1 className="text-xl font-bold text-primary">I²E</h1>
-        <p className="text-sm text-muted-foreground hidden sm:block">International Institute of Entrepreneurship</p>
+        <h1 className="text-lg sm:text-xl font-bold text-primary">I²E</h1>
+        <p className="text-xs sm:text-sm text-muted-foreground hidden sm:block">International Institute of Entrepreneurship</p>
       </div>
     </div>
   );
