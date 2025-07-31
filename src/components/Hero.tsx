@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-entrepreneurship.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden pt-20 md:pt-24 lg:pt-28">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden pt-24 md:pt-28 lg:pt-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
