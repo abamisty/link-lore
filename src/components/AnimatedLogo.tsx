@@ -30,7 +30,7 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
   return (
     <div className={cn("relative flex items-center space-x-3", className)}>
       {/* Animated Compass Logo */}
-      <div className="relative h-36 w-36">
+      <div className="relative h-24 w-24 md:h-32 md:w-32 lg:h-36 lg:w-36">
         {/* Large Compass Phase */}
         <div className="absolute inset-0">
           <img
