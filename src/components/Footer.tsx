@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/i2e-logo.png";
+import { AnimatedLogo } from "@/components/AnimatedLogo";
 
 export const Footer = () => {
   return (
@@ -8,13 +8,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <img src={logo} alt="I²E Logo" className="h-12 w-auto filter brightness-0 invert" />
-              <div>
-                <h3 className="text-2xl font-bold">I²E</h3>
-                <p className="text-sm opacity-80">International Institute of Entrepreneurship</p>
-              </div>
-            </div>
+            <AnimatedLogo className="mb-6" />
             <p className="text-lg opacity-90 mb-6 max-w-md">
               Democratizing access to the keys to success in a world of opportunity, 
               serving a more responsible and humane economy.
