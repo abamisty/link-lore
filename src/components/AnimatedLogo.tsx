@@ -32,11 +32,41 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
       {/* Animated Compass Logo */}
       <div className="relative h-20 w-20">
         {/* Large Compass Phase */}
-        <div className="absolute inset-0">
+        {/* Large Logo Phase */}
+        <div className={cn(
+          "absolute inset-0 transition-all duration-1000",
+          animationPhase === "final" ? "opacity-0 scale-0" : "opacity-100 scale-100"
+        )}>
           <img
             src="/i2e_Logo.gif"
             alt="I²E Logo"
-            className="w-full h-full object-contain"
+            className={cn(
+              "w-full h-full object-contain",
+              animationPhase === "compass" && "animate-spin"
+            )}
+            style={{
+              animationDuration: animationPhase === "compass" ? "4s" : "0s",
+              animationIterationCount: animationPhase === "compass" ? "1" : "0"
+            }}
+          />
+        </div>
+
+        {/* Small Logo Phase */}
+        <div className={cn(
+          "absolute inset-0 transition-all duration-1000 delay-500",
+          animationPhase === "final" ? "opacity-100 scale-[0.8]" : "opacity-0 scale-0"
+        )}>
+          <img
+            src="/i2e_Logo.gif"
+            alt="I²E Logo"
+            className={cn(
+              "w-full h-full object-contain",
+              animationPhase === "final" && "animate-spin"
+            )}
+            style={{
+              animationDuration: animationPhase === "final" ? "4s" : "0s",
+              animationIterationCount: animationPhase === "final" ? "1" : "0"
+            }}
           />
         </div>
       </div>
