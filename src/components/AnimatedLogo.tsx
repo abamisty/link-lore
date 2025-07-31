@@ -44,10 +44,10 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
       {/* Text that fades in */}
       <div className={cn(
         "transition-all duration-1000 delay-1000",
-        animationPhase === "final" ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
+        animationPhase === "final" ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"
       )}>
-        <h1 className="text-xl font-bold text-primary">I²E</h1>
-        <p className="text-sm text-muted-foreground hidden sm:block">International Institute of Entrepreneurship</p>
+        <h1 className="text-lg md:text-xl font-bold text-primary">I²E</h1>
+        <p className="text-xs md:text-sm text-muted-foreground hidden sm:block">International Institute of Entrepreneurship</p>
       </div>
     </div>
   );
