@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -30,7 +31,7 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
   return (
     <div className={cn("relative flex items-center space-x-2 sm:space-x-3", className)}>
       {/* Animated Compass Logo */}
-      <div className="relative h-16 w-16 sm:h-24 sm:w-24 md:h-32 md:w-32 lg:h-36 lg:w-36">
+      <div className="relative h-20 w-20 sm:h-28 sm:w-28 md:h-40 md:w-40 lg:h-44 lg:w-44">
         {/* Large Compass Phase */}
         <div className="absolute inset-0">
           <img
