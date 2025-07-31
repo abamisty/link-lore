@@ -15,16 +15,22 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
       setAnimationPhase("final");
     }, 4500);
 
+    // Loop the animation forever
+    const loopTimer = setTimeout(() => {
+      setAnimationPhase("initial");
+    }, 8500);
+
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
+      clearTimeout(loopTimer);
     };
-  }, []);
+  }, [animationPhase]);
 
   return (
     <div className={cn("relative flex items-center space-x-3", className)}>
       {/* Animated Compass Logo */}
-      <div className="relative h-12 w-12">
+      <div className="relative h-20 w-20">
         {/* Large Compass Phase */}
         <div className={cn(
           "absolute inset-0 transition-all duration-1000",
