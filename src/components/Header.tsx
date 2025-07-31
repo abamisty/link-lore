@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/i2e-logo.png";
+import { AnimatedLogo } from "@/components/AnimatedLogo";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,14 +20,8 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <nav className="content-container flex items-center justify-between py-4 px-6">
-        {/* Logo */}
-        <div className="flex items-center space-x-3">
-          <img src={logo} alt="I²E Logo" className="h-12 w-auto" />
-          <div className="hidden sm:block">
-            <h1 className="text-xl font-bold text-primary">I²E</h1>
-            <p className="text-sm text-muted-foreground">International Institute of Entrepreneurship</p>
-          </div>
-        </div>
+        {/* Animated Logo */}
+        <AnimatedLogo />
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-1">
