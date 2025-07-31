@@ -66,7 +66,7 @@ export const Header = () => {
                 {item.name}
               </a>
             ))}
-            <div className="pt-4">
+            <div className="pt-4 hidden sm:block">
               <Button variant="hero" size="sm" className="w-full">
                 Get Started
               </Button>
