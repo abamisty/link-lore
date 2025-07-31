@@ -34,7 +34,7 @@ export const AnimatedLogo = ({ className }: { className?: string }) => {
         {/* Large Compass Phase */}
         <div className="absolute inset-0">
           <img
-            src="/logo logo gif.gif"
+            src="/logo-logo-gif.gif"
             alt="I²E Logo"
             className="w-full h-full object-contain"
           />
