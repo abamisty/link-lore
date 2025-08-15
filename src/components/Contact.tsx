@@ -1,11 +1,15 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { BookingForm } from "./BookingForm";
 
 export const Contact = () => {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
   return (
     <section id="contact" className="py-24 bg-muted/50">
       <div className="content-container px-6">
@@ -159,9 +163,16 @@ export const Contact = () => {
               Join thousands of successful entrepreneurs who have launched their businesses with our guidance. 
               Schedule a consultation today and take the first step towards your entrepreneurial success.
             </p>
-            <Button size="lg" variant="default" onClick={() => alert('Consultation scheduling will open in a new window. Please call us at +1 (555) 123-4567 to book your appointment.')}>
-              Schedule a Consultation
-            </Button>
+            <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
+              <DialogTrigger asChild>
+                <Button size="lg" variant="default">
+                  Schedule a Consultation
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                <BookingForm onClose={() => setIsBookingOpen(false)} />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>

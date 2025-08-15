@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { BookingForm } from "./BookingForm";
 import trainingIcon from "@/assets/training-icon.png";
 import coachingIcon from "@/assets/coaching-icon.png";
 import networkingIcon from "@/assets/networking-icon.png";
 
 export const Services = () => {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const services = [
     {
       icon: trainingIcon,
@@ -108,9 +112,16 @@ export const Services = () => {
               Need expert advice to structure your training offering or develop your team's skills? 
               We'll help you implement effective solutions that align with your vision and challenges.
             </p>
-            <Button variant="professional" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              Schedule Consultation
-            </Button>
+            <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
+              <DialogTrigger asChild>
+                <Button variant="professional" size="lg">
+                  Schedule Consultation
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                <BookingForm onClose={() => setIsBookingOpen(false)} />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
