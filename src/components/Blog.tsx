@@ -121,7 +121,7 @@ export const Blog = () => {
                     </div>
                   </div>
                   
-                  <Button variant="ghost" size="sm" className="group/btn">
+                  <Button variant="ghost" size="sm" className="group/btn" onClick={() => alert(`Opening article: ${post.title}`)}>
                     Read More
                     <ArrowRight className="ml-1 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
@@ -133,7 +133,7 @@ export const Blog = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
+          <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => alert('Redirecting to full blog archive...')}>
             View All Articles
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

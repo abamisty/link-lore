@@ -31,11 +31,11 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}>
               Start Your Journey
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Button>
-            <Button variant="outline" size="xl">
+            <Button variant="outline" size="xl" onClick={() => document.getElementById('approach')?.scrollIntoView({ behavior: 'smooth' })}>
               Learn More
             </Button>
           </div>

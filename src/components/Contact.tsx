@@ -137,7 +137,10 @@ export const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full" onClick={(e) => {
+                  e.preventDefault();
+                  alert('Thank you for your message! We will get back to you within 24 hours.');
+                }}>
                   <Send className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>
@@ -156,7 +159,7 @@ export const Contact = () => {
               Join thousands of successful entrepreneurs who have launched their businesses with our guidance. 
               Schedule a consultation today and take the first step towards your entrepreneurial success.
             </p>
-            <Button size="lg" variant="default">
+            <Button size="lg" variant="default" onClick={() => alert('Consultation scheduling will open in a new window. Please call us at +1 (555) 123-4567 to book your appointment.')}>
               Schedule a Consultation
             </Button>
           </div>

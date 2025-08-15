@@ -77,6 +77,7 @@ export const Programs = () => {
                 variant="secondary" 
                 size="lg"
                 className="bg-background text-primary hover:bg-background/90"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Apply for Program
               </Button>
@@ -84,6 +85,7 @@ export const Programs = () => {
                 variant="outline" 
                 size="lg"
                 className="border-primary-foreground/20 text-primary-foreground hover:bg-background/10"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
               </Button>
@@ -107,7 +109,7 @@ export const Programs = () => {
               <Badge variant="outline">Virtual</Badge>
               <Badge variant="outline">Certificate</Badge>
             </div>
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               View Details
             </Button>
           </div>
@@ -122,7 +124,7 @@ export const Programs = () => {
               <Badge variant="outline">Virtual</Badge>
               <Badge variant="outline">Certificate</Badge>
             </div>
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               View Details
             </Button>
           </div>
@@ -137,7 +139,7 @@ export const Programs = () => {
               <Badge variant="outline">Virtual</Badge>
               <Badge variant="outline">Certificate</Badge>
             </div>
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               View Details
             </Button>
           </div>
@@ -147,7 +149,7 @@ export const Programs = () => {
           <p className="text-lg text-muted-foreground mb-6">
             Ready to transform your entrepreneurial vision into reality?
           </p>
-          <Button variant="professional" size="xl">
+          <Button variant="professional" size="xl" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
             Browse All Programs
           </Button>
         </div>

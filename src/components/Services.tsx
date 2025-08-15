@@ -71,6 +71,7 @@ export const Services = () => {
               <Button 
                 variant="outline" 
                 className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
               </Button>
@@ -107,7 +108,7 @@ export const Services = () => {
               Need expert advice to structure your training offering or develop your team's skills? 
               We'll help you implement effective solutions that align with your vision and challenges.
             </p>
-            <Button variant="professional" size="lg">
+            <Button variant="professional" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Schedule Consultation
             </Button>
           </div>

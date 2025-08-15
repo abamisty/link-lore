@@ -38,7 +38,7 @@ export const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <Button variant="hero" size="sm">
+          <Button variant="hero" size="sm" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
             Get Started
           </Button>
         </div>
@@ -67,7 +67,10 @@ export const Header = () => {
               </a>
             ))}
             <div className="pt-4">
-              <Button variant="hero" size="sm" className="w-full">
+              <Button variant="hero" size="sm" className="w-full" onClick={() => {
+                setIsMenuOpen(false);
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}>
                 Get Started
               </Button>
             </div>
